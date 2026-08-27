@@ -1,9 +1,9 @@
 import { TopicItem, CategoryInfo } from '../types/topics';
 import { Pathway } from '../data/pathways';
 
-export const SITE_URL = 'https://velvetandember.app';
+export const SITE_URL = 'https://www.kamasoul.fun';
 export const SITE_NAME = 'Velvet & Ember';
-export const DEFAULT_OG_IMAGE = 'https://velvetandember.app/assets/images/sensual_embrace_warm_1787823085718.jpg';
+export const DEFAULT_OG_IMAGE = 'https://www.kamasoul.fun/assets/images/sensual_embrace_warm_1787823085718.jpg';
 export const DEFAULT_DESCRIPTION =
   'A sensual, judgment-free guide to deeper connection, pleasure, and charged communication with your partner. Explore 101 curated intimacy guides and structured learning pathways.';
 
