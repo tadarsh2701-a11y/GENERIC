@@ -98,7 +98,7 @@ export function Footer() {
                   </p>
                   <div className="p-4 rounded-xl bg-[#201f1f] border border-white/5">
                     <p className="text-xs text-[#e5e2e1] font-semibold">Editorial Inquiries:</p>
-                    <p className="text-sm font-mono text-[#ffb4a8] mt-0.5">curator@velvetandember.app</p>
+                    <p className="text-sm font-mono text-[#ffb4a8] mt-0.5">curator@kamasoul.fun</p>
                   </div>
                 </div>
               </div>
