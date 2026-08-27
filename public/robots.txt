@@ -1,5 +1,5 @@
 # Velvet & Ember Robots.txt
-# Production Domain: https://velvetandember.app
+# Production Domain: https://www.kamasoul.fun
 
 User-agent: *
 Allow: /
@@ -8,4 +8,4 @@ Allow: /
 Disallow: /bookmarks
 
 # Sitemap Location
-Sitemap: https://velvetandember.app/sitemap.xml
+Sitemap: https://www.kamasoul.fun/sitemap.xml
