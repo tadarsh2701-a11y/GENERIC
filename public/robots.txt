@@ -128,4 +128,4 @@ Disallow: /
 # SITEMAP
 # ============================================================
 
-Sitemap: https://www.kamasoul.fun/sitemap.xml
+Sitemap: https://www.kamasoul.fun/sitemap-v2.xml
