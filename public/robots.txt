@@ -1,11 +1,131 @@
-# Velvet & Ember Robots.txt
-# Production Domain: https://www.kamasoul.fun
+# Velvet & Ember / KamaSoul Robots.txt
+# Production domain: https://www.kamasoul.fun/
+
+# ============================================================
+# CONTENT SIGNALS
+# ============================================================
+#
+# search=yes
+#   Content may be used for traditional search indexing/results.
+#
+# ai-input=yes
+#   Content may be used as input/context for AI systems,
+#   including RAG, grounding, and AI-powered search.
+#
+# ai-train=no
+#   Content may NOT be used for training or fine-tuning AI models.
+#
+# use=reference
+#   AI systems may reference the content rather than treating
+#   unrestricted reuse as permitted.
+#
+# Content-Signal support varies between crawlers and platforms.
+# Crawler-specific rules are also provided below.
 
 User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=no,use=reference
 Allow: /
 
-# Disallow private user-storage states and non-indexable routes
+# Private / user-specific / non-indexable routes
 Disallow: /bookmarks
+Disallow: /login
+Disallow: /signup
+Disallow: /account
+Disallow: /profile
+Disallow: /settings
+Disallow: /admin
+Disallow: /dashboard
 
-# Sitemap Location
+
+# ============================================================
+# GOOGLE SEARCH
+# ============================================================
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+
+# ============================================================
+# BING
+# ============================================================
+
+User-agent: Bingbot
+Allow: /
+
+
+# ============================================================
+# OPENAI
+# ============================================================
+
+# Allow ChatGPT user-requested browsing/access
+User-agent: ChatGPT-User
+Allow: /
+
+# Block OpenAI model-training crawler
+User-agent: GPTBot
+Disallow: /
+
+
+# ============================================================
+# GOOGLE AI
+# ============================================================
+
+# Block use for Google's Gemini/model-training related purposes
+# without blocking normal Google Search.
+User-agent: Google-Extended
+Disallow: /
+
+
+# ============================================================
+# ANTHROPIC
+# ============================================================
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+
+# ============================================================
+# PERPLEXITY
+# ============================================================
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+
+# ============================================================
+# OTHER AI / DATASET CRAWLERS
+# ============================================================
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+
+# ============================================================
+# SITEMAP
+# ============================================================
+
 Sitemap: https://www.kamasoul.fun/sitemap.xml
