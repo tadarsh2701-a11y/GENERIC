@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvet &amp; Ember - Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#131313",
+                      "on-secondary-container": "#dab36a",
+                      "surface-tint": "#ffb4a8",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-tertiary-container": "#c97f80",
+                      "outline-variant": "#58413e",
+                      "surface-container-highest": "#353534",
+                      "on-tertiary": "#532022",
+                      "secondary-container": "#604403",
+                      "on-primary": "#670502",
+                      "secondary-fixed-dim": "#e9c176",
+                      "on-error-container": "#ffdad6",
+                      "on-error": "#690005",
+                      "on-primary-fixed-variant": "#871f15",
+                      "on-tertiary-fixed": "#390b0e",
+                      "tertiary-fixed-dim": "#ffb3b2",
+                      "error-container": "#93000a",
+                      "on-background": "#e5e2e1",
+                      "primary": "#ffb4a8",
+                      "primary-fixed": "#ffdad4",
+                      "secondary-fixed": "#ffdea5",
+                      "inverse-primary": "#a83729",
+                      "on-surface": "#e5e2e1",
+                      "on-primary-fixed": "#410000",
+                      "on-primary-container": "#ee6a57",
+                      "inverse-on-surface": "#313030",
+                      "surface-variant": "#353534",
+                      "tertiary-fixed": "#ffdad9",
+                      "on-tertiary-fixed-variant": "#6f3537",
+                      "tertiary": "#ffb3b2",
+                      "error": "#ffb4ab",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary": "#e9c176",
+                      "surface-bright": "#3a3939",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-secondary-fixed": "#261900",
+                      "surface-dim": "#131313",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary": "#412d00",
+                      "surface-container": "#201f1f",
+                      "on-surface-variant": "#dfbfba",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "primary-container": "#600000",
+                      "outline": "#a68a86",
+                      "background": "#131313",
+                      "tertiary-container": "#4e1b1d",
+                      "inverse-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1200px",
+                      "unit": "8px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Custom grain effect for background */
+        .grain-bg {
+            position: relative;
+        }
+        .grain-bg::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            z-index: 50;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Glass card hover effect */
+        .glass-card-hover {
+            transition: all 0.4s ease;
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px -10px rgba(255, 180, 168, 0.15);
+            border-color: rgba(255, 180, 168, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased grain-bg min-h-screen flex flex-col pt-24">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-[0_0_20px_rgba(96,0,0,0.1)] z-40 transition-all ease-in-out duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<a class="font-display-lg text-headline-sm md:text-headline-md tracking-tight text-primary transition-all ease-in-out duration-300 hover:scale-105" href="#">
+                Velvet &amp; Ember
+            </a>
+<!-- Links (Hidden on mobile) -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-body-md transition-all ease-in-out duration-300 hover:scale-105" href="#">
+                    Topics
+                </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md transition-all ease-in-out duration-300 hover:scale-105" href="#">
+                    About
+                </a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button aria-label="Account" class="text-on-surface-variant hover:text-primary transition-colors transition-all ease-in-out duration-300 hover:scale-105">
+<span class="material-symbols-outlined text-[28px]" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 gap-12">
+<!-- Header Section -->
+<header class="flex flex-col items-center text-center gap-4 max-w-3xl mx-auto">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                Discover New Paths to Pleasure
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Curated experiences designed to deepen intimacy and expand your sensory horizons.
+            </p>
+</header>
+<!-- Search & Filter Bar -->
+<section class="flex flex-col md:flex-row gap-6 items-center justify-between bg-surface-container-low/50 backdrop-blur-md p-6 rounded-xl border border-white/5">
+<!-- Search -->
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container border-b border-secondary/30 focus:border-secondary focus:ring-0 text-on-surface pl-12 pr-4 py-3 rounded-t-md transition-all duration-300 outline-none placeholder:text-on-surface-variant/50" placeholder="Search topics..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+<button class="px-4 py-2 rounded-full border border-secondary/50 text-secondary bg-secondary/10 font-label-caps text-label-caps transition-all hover:bg-secondary/20">All</button>
+<button class="px-4 py-2 rounded-full border border-white/10 text-on-surface-variant bg-transparent font-label-caps text-label-caps transition-all hover:border-secondary/30 hover:text-on-surface">Emotional</button>
+<button class="px-4 py-2 rounded-full border border-white/10 text-on-surface-variant bg-transparent font-label-caps text-label-caps transition-all hover:border-secondary/30 hover:text-on-surface">Physical</button>
+<button class="px-4 py-2 rounded-full border border-white/10 text-on-surface-variant bg-transparent font-label-caps text-label-caps transition-all hover:border-secondary/30 hover:text-on-surface">Sensory</button>
+<div class="w-px h-6 bg-white/10 mx-2 hidden md:block"></div>
+<button class="px-4 py-2 rounded-full border border-white/10 text-on-surface-variant bg-transparent font-label-caps text-label-caps transition-all hover:border-secondary/30 hover:text-on-surface">Beginner</button>
+<button class="px-4 py-2 rounded-full border border-white/10 text-on-surface-variant bg-transparent font-label-caps text-label-caps transition-all hover:border-secondary/30 hover:text-on-surface">Advanced</button>
+</div>
+</section>
+<!-- Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<article class="group relative flex flex-col bg-[#2D132C]/40 backdrop-blur-[20px] border border-white/5 rounded-xl overflow-hidden glass-card-hover cursor-pointer h-[420px]">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-60" data-alt="A soft, dimly lit bedroom setting with silken sheets in deep burgundy tones. The lighting is warm and indirect, creating a mood of intimate sensuality and calm reflection. Editorial style, high-end erotic wellness aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsPXIaYrGUB9YPlVuhX7S-gelWcjXMQHDyg-GUHDhD1EZf5QqsIY7TXRopQD1dJreBVP8RumiMCl1RUegiRarHRzN1BlGoymU2z64AtJRnpDNGUbiOyIiaiSeIIzA6vBcuW1ySRZDk2sypgGk9PkdiS5emxSgvxb2teyN0zVLof4MI_S-SOY5Z-spBxKdNLgue1Wl6n3UOkqJE5HIq915fpRHZcGxeeHy3YooNU9EomN1Sc1qn-SwbwA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface/50 to-transparent"></div>
+<div class="relative flex flex-col h-full p-6 justify-end z-10">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 rounded bg-surface/80 backdrop-blur text-secondary font-label-caps text-[10px] uppercase tracking-wider border border-secondary/20">Emotional</span>
+<span class="px-2 py-1 rounded bg-surface/80 backdrop-blur text-on-surface-variant font-label-caps text-[10px] uppercase tracking-wider border border-white/10">Beginner</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">The Art of Anticipation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Building desire through distance and verbal exploration before physical touch begins.</p>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group relative flex flex-col bg-[#2D132C]/40 backdrop-blur-[20px] border border-white/5 rounded-xl overflow-hidden glass-card-hover cursor-pointer h-[420px]">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-60" data-alt="Close up of a hand gently tracing a collarbone, skin illuminated by warm, amber candlelight. Shadows are deep and luxurious, conveying a sense of intense physical connection and delicate touch. Minimalist, premium visual style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0u_yq-6IYUEAoEE4kHWkhoXp64twu_mlVCOge6I1GA0pyYF3ZPFgxPp_FuJL96zORGv8B6OLhjGlyLk7EamcboD0XEEgkFTO5jio6hIqTEdb2x4QwuOtpPHQY_L6nUFsoomT3ureNHb50n-co901cMQmOHm_Z9NX7wbXup1O7ocH1zqmK4-oLnWlyoJLFe5J8cJmU8PABcEZo9OBfLGl8l-kfpZGibsFFTQMli9M2xb9hGOfkWHzG5A')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface/50 to-transparent"></div>
+<div class="relative flex flex-col h-full p-6 justify-end z-10">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 rounded bg-surface/80 backdrop-blur text-secondary font-label-caps text-[10px] uppercase tracking-wider border border-secondary/20">Physical</span>
+<span class="px-2 py-1 rounded bg-surface/80 backdrop-blur text-on-surface-variant font-label-caps text-[10px] uppercase tracking-wider border border-white/10">Intermediate</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">Tactile Mapping</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Discovering erogenous zones beyond the obvious through systematic, varied touch.</p>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group relative flex flex-col bg-[#2D132C]/40 backdrop-blur-[20px] border border-white/5 rounded-xl overflow-hidden glass-card-hover cursor-pointer h-[420px]">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-60" data-alt="Abstract macro photography of velvet fabric folding, lit with a soft blush glow against a dark background. Evokes a sense of sensory immersion, luxury, and soft restraint. Editorial aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCpB8C3f3WcYGlhxpRFoqH5HIRN5EOg8AGASYO3J3U5juH4RHNWiboSv78mNjF5EDFnoyyBp7mxnhZQNcExa1fy6WvcAoat_SODxlnReVmkEyvObg3ScFw_LKEsdzvrBGkr58NYs5futgZQVdDrGDzxNATUOCWludNBbBA8mbQ9HWsRJtVMJPwLkxZSbFXIW-UYD2KvCW2GBDQX1ohjrhZiwkrbBv0U4OC-So5pOiITu375kOumbekUA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface/50 to-transparent"></div>
+<div class="relative flex flex-col h-full p-6 justify-end z-10">
+<div class="flex gap-2 mb-4">
+<span class="px-2 py-1 rounded bg-surface/80 backdrop-blur text-secondary font-label-caps text-[10px] uppercase tracking-wider border border-secondary/20">Sensory</span>
+<span class="px-2 py-1 rounded bg-surface/80 backdrop-blur text-on-surface-variant font-label-caps text-[10px] uppercase tracking-wider border border-white/10">Advanced</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">Sensory Deprivation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Using blindfolds and earplugs to heighten physical sensation and trust.</p>
+</div>
+</article>
+</section>
+<!-- Load More Button -->
+<div class="flex justify-center mt-8">
+<button class="px-8 py-3 border border-secondary text-secondary font-body-md hover:bg-secondary/10 transition-all rounded-sm">
+                Explore More Paths
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest flex flex-col items-center gap-gutter px-margin-mobile md:px-margin-desktop text-center mt-auto">
+<h2 class="font-display-lg-mobile md:font-display-lg text-headline-sm text-on-surface">
+            Velvet &amp; Ember
+        </h2>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Contact Us</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Consent Guidelines</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Adult Content Disclaimer</a>
+</nav>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 opacity-60 text-sm">
+            © 2024 Velvet &amp; Ember. Designed with intimacy and consent at its core.
+        </p>
+</footer>
+</body></html>

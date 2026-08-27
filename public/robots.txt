@@ -1,0 +1,11 @@
+# Velvet & Ember Robots.txt
+# Production Domain: https://velvetandember.app
+
+User-agent: *
+Allow: /
+
+# Disallow private user-storage states and non-indexable routes
+Disallow: /bookmarks
+
+# Sitemap Location
+Sitemap: https://velvetandember.app/sitemap.xml

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Art of Slow Foreplay - Velvet &amp; Ember</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#131313",
+                        "on-secondary-container": "#dab36a",
+                        "surface-tint": "#ffb4a8",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#c97f80",
+                        "outline-variant": "#58413e",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary": "#532022",
+                        "secondary-container": "#604403",
+                        "on-primary": "#670502",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#871f15",
+                        "on-tertiary-fixed": "#390b0e",
+                        "tertiary-fixed-dim": "#ffb3b2",
+                        "error-container": "#93000a",
+                        "on-background": "#e5e2e1",
+                        "primary": "#ffb4a8",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-fixed": "#ffdea5",
+                        "inverse-primary": "#a83729",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#410000",
+                        "on-primary-container": "#ee6a57",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353534",
+                        "tertiary-fixed": "#ffdad9",
+                        "on-tertiary-fixed-variant": "#6f3537",
+                        "tertiary": "#ffb3b2",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary": "#e9c176",
+                        "surface-bright": "#3a3939",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-secondary-fixed": "#261900",
+                        "surface-dim": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#412d00",
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#dfbfba",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "primary-container": "#600000",
+                        "outline": "#a68a86",
+                        "background": "#131313",
+                        "tertiary-container": "#4e1b1d",
+                        "inverse-surface": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background-color: rgba(45, 19, 44, 0.15); /* #2D132C with low opacity */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(233, 193, 118, 0.1); /* Muted Gold glow border */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .film-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .bloom-glow {
+            box-shadow: 0 0 20px rgba(255, 180, 168, 0.15); /* Primary blush glow */
+        }
+        .bloom-glow-hover:hover {
+            box-shadow: 0 0 30px rgba(96, 0, 0, 0.3); /* Burgundy glow on hover */
+            border-color: rgba(255, 180, 168, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased relative min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden">
+<div class="film-grain"></div>
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-40 bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-[0_0_20px_rgba(96,0,0,0.1)] transition-all ease-in-out duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md tracking-tight text-primary hover:scale-105 duration-300" href="#">Velvet &amp; Ember</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-body-lg text-body-lg transition-all ease-in-out duration-300 hover:scale-105" href="#">Topics</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg hover:scale-105 duration-300" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-16 text-center max-w-3xl mx-auto">
+<div class="flex items-center justify-center gap-3 mb-6">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest border border-secondary/30 px-3 py-1 rounded-full">Intimacy</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest border border-white/10 px-3 py-1 rounded-full">Pacing</span>
+<div class="flex items-center text-on-surface-variant text-sm ml-2">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="schedule">schedule</span>
+                    15 min read
+                </div>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">The Art of Slow Foreplay</h1>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant">Building tension and desire through intentional, unhurried connection.</p>
+</header>
+<!-- Hero Image (Atmospheric) -->
+<div class="w-full h-96 md:h-[500px] rounded-xl overflow-hidden mb-16 relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A moody, deeply sensual, high-end editorial photograph of two hands lightly touching against a dark, warm background. The lighting is very low, relying on a soft bloom of dark burgundy and muted gold light that creates deep shadows and highlights only the delicate skin textures. The atmosphere is quiet, intimate, and luxurious, matching a premium glassmorphic dark-mode web design." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNnk1ajkmCPf4tbawlN8h7EIEYB7HoochQhk4z-0LOFzzL6GT0IvV7rxNnMOtvP73U_IVoOtMYdBLstTeZB2HJgkIlSU47XI1JOHCJjNehuQgu7LDljWTrIHcX8sQqSEwfTn707NLUWyyPr6_dxakONrpQj7TG_IjH85w4ZEmP5xX5GPqheLKXk_1lc9fp4j3ff0Gc2HUz62MG6GHHjJU9abKVGdguZEAoD6ir-b0l-JPg28lxcNLkAA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent"></div>
+</div>
+<!-- Quick Overview Card (Glassmorphism) -->
+<div class="glass-panel rounded-xl p-8 mb-16 relative overflow-hidden group hover:border-primary/30 transition-all duration-500">
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-700"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6 border-b border-white/10 pb-4">Quick Overview</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary uppercase mb-2">Why It Matters</h3>
+<p class="text-on-surface-variant text-sm">Slow pacing shifts focus from the destination to the journey, allowing sensory details to heighten arousal and emotional connection.</p>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary uppercase mb-2">Difficulty</h3>
+<div class="flex items-center gap-2">
+<span class="text-on-surface text-sm">Beginner</span>
+<div class="flex gap-1">
+<div class="w-8 h-1 bg-secondary rounded-full"></div>
+<div class="w-8 h-1 bg-white/10 rounded-full"></div>
+<div class="w-8 h-1 bg-white/10 rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high/50 p-4 rounded-lg border border-primary/20">
+<h3 class="font-label-caps text-label-caps text-primary uppercase mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="gpp_good">gpp_good</span>
+                        Consent Reminder
+                    </h3>
+<p class="text-on-surface-variant text-xs">Always maintain enthusiastic consent. Slowing down provides more opportunities to check in non-verbally and verbally.</p>
+</div>
+</div>
+</div>
+<!-- Try This Tonight Highlight -->
+<div class="bg-surface-container-high/40 border border-primary/30 rounded-xl p-8 mb-24 bloom-glow relative overflow-hidden">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="wb_incandescent">wb_incandescent</span>
+                 Try This Tonight
+             </h3>
+<p class="text-on-surface mb-4">Set a timer for 15 minutes. During this time, standard erogenous zones are completely off-limits. Focus entirely on skin-to-skin contact, breathing, and exploring non-primary areas like the back of the neck, inner wrists, or along the spine.</p>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest w-full py-12 flex flex-col items-center gap-gutter px-margin-mobile md:px-margin-desktop text-center mt-auto">
+<h4 class="font-display-lg text-headline-sm text-on-surface mb-4">Velvet &amp; Ember</h4>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Consent Guidelines</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Adult Content Disclaimer</a>
+</div>
+<p class="font-body-md text-body-md text-secondary opacity-60">© 2024 Velvet &amp; Ember. Designed with intimacy and consent at its core.</p>
+</footer>
+</body></html>

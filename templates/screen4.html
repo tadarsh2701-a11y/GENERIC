@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - Velvet &amp; Ember</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#131313",
+                      "on-secondary-container": "#dab36a",
+                      "surface-tint": "#ffb4a8",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-tertiary-container": "#c97f80",
+                      "outline-variant": "#58413e",
+                      "surface-container-highest": "#353534",
+                      "on-tertiary": "#532022",
+                      "secondary-container": "#604403",
+                      "on-primary": "#670502",
+                      "secondary-fixed-dim": "#e9c176",
+                      "on-error-container": "#ffdad6",
+                      "on-error": "#690005",
+                      "on-primary-fixed-variant": "#871f15",
+                      "on-tertiary-fixed": "#390b0e",
+                      "tertiary-fixed-dim": "#ffb3b2",
+                      "error-container": "#93000a",
+                      "on-background": "#e5e2e1",
+                      "primary": "#ffb4a8",
+                      "primary-fixed": "#ffdad4",
+                      "secondary-fixed": "#ffdea5",
+                      "inverse-primary": "#a83729",
+                      "on-surface": "#e5e2e1",
+                      "on-primary-fixed": "#410000",
+                      "on-primary-container": "#ee6a57",
+                      "inverse-on-surface": "#313030",
+                      "surface-variant": "#353534",
+                      "tertiary-fixed": "#ffdad9",
+                      "on-tertiary-fixed-variant": "#6f3537",
+                      "tertiary": "#ffb3b2",
+                      "error": "#ffb4ab",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary": "#e9c176",
+                      "surface-bright": "#3a3939",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-secondary-fixed": "#261900",
+                      "surface-dim": "#131313",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary": "#412d00",
+                      "surface-container": "#201f1f",
+                      "on-surface-variant": "#dfbfba",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "primary-container": "#600000",
+                      "outline": "#a68a86",
+                      "background": "#131313",
+                      "tertiary-container": "#4e1b1d",
+                      "inverse-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1200px",
+                      "unit": "8px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #131313;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            color: #e5e2e1;
+        }
+        .bloom-shadow {
+            box-shadow: 0 0 30px rgba(96, 0, 0, 0.15);
+        }
+        .glass-card {
+            background: rgba(45, 19, 44, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(218, 179, 106, 0.1);
+        }
+      </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-24">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-[0_0_20px_rgba(96,0,0,0.1)]">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md tracking-tight text-primary transition-all ease-in-out duration-300 hover:scale-105" href="#">Velvet &amp; Ember</a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300" href="#">Topics</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 hover:scale-105 duration-300" href="#">About</a>
+</div>
+<!-- Trailing Action -->
+<div class="flex items-center">
+<button class="text-on-surface hover:text-primary transition-colors hover:scale-105 duration-300 flex items-center justify-center p-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-32">
+<!-- Hero Section -->
+<section class="py-24 md:py-32 flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 space-y-8">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">The Art of Intimacy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
+                    Velvet &amp; Ember is a sanctuary for those seeking a deeper connection with themselves and their partners. We elevate erotic wellness through education, artistry, and an unwavering commitment to consent.
+                </p>
+<div class="pt-4">
+<button class="bg-primary-container text-on-primary-container font-body-md text-body-md px-8 py-4 rounded-full bloom-shadow hover:scale-105 transition-all duration-300 border border-transparent hover:border-primary/30">
+                        Our Philosophy
+                    </button>
+</div>
+</div>
+<div class="md:w-1/2 w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden relative bloom-shadow">
+<div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="A sophisticated, low-key photograph of intertwined hands resting on dark velvet fabric. The lighting is soft and cinematic, casting warm amber and deep plum shadows. The mood is intimate, slow, and highly tactile, embodying premium erotic wellness without explicit content. High-end editorial style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3RY1h_aEEIwV_1-kgM50Ym6UOfqYII7c1eG8i8Sp1-TZs8BS0zfyOSvDJ9eZprA4Mfb0t_YANE81pZCqu6Sshc8zdROM2751xGg7w0N9GnLZ8XSZMHSrSbZ-pTXN5qoAUZg2qfBQ7uCay46JYgDZIyzh153bkdjFbrdM5HeYOc0COFVJAJThxBbzV19IhOHmXQv68bjm4OBjJz-Zf-G6CzOUZq6SuEjm5JjD1abGjMGCJ1b9ACYQlAg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+</div>
+</section>
+<!-- Bento Grid: Core Values -->
+<section class="py-16 space-y-12">
+<div class="text-center space-y-4 max-w-2xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface">Pillars of Practice</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Built on the foundation of trust, guided by the pursuit of pleasure.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Value 1 -->
+<div class="glass-card rounded-2xl p-8 hover:border-surface-tint transition-colors duration-500 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center mb-6 group-hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 0;">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Absolute Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Your journey is private. We employ end-to-end security measures, ensuring your exploration remains yours alone. No clinical coldness, just secure warmth.</p>
+</div>
+<!-- Value 2 -->
+<div class="glass-card rounded-2xl p-8 hover:border-surface-tint transition-colors duration-500 group md:col-span-2 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700">
+<div class="bg-cover bg-center w-full h-full" data-alt="Abstract, soft-focus macro photography of silk fabric flowing gently. The colors are deep charcoal with subtle highlights of blush pink and muted gold. The texture feels incredibly soft and inviting, representing luxury and mindful touch. Dark mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDEITIkBkmxDpWK9Tq4dhnqdtyWK00NFqvtjtU4c2g9wzDBDnvkRVw3t2LshEbf4_Ifg0OocjV4KhGweZ17VAXIGB-M6IL0GSRCZt8FHoMFGSH1dfqC11WOocNtuG6oqc1ZOjL9mg1qhFeeuLMwO9UOBquZ5ojmLsTDE5OHm9czyDwS-fdCIl2MIdbsMiCaDCqzDw_3AplRs9Lbgj4w4-8WIQ4Vpv0HNsw5KEszJDP-CemF9CI-PdpTw')"></div>
+</div>
+<div class="relative z-10 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center mb-6 group-hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</div>
+<div class="relative z-10 max-w-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Consent as Canvas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We believe explicit, enthusiastic consent is not a barrier, but the very canvas on which true intimacy is painted. Our frameworks prioritize clear communication.</p>
+</div>
+</div>
+<!-- Value 3 -->
+<div class="glass-card rounded-2xl p-8 hover:border-surface-tint transition-colors duration-500 group md:col-span-3 flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-2/3">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center mb-6 group-hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 0;">auto_awesome</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Elevated Education</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Moving beyond basic mechanics, our modules focus on emotional resonance, psychological safety, and the artful execution of desire. Curated by experts in somatics and relationship therapy.</p>
+</div>
+<div class="md:w-1/3 w-full h-48 rounded-xl overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full" data-alt="A close-up, abstract detail of a dimly lit, elegantly designed interior space. Soft candlelight reflecting off a dark, polished surface. A single, blurred silhouette of a person in the background. The mood is calm, sophisticated, and deeply private. Deep burgundy and charcoal tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqyLSdDfQNfsAc14viepuMZUV7xYTd7lv8ZVPosiWVkqyEQ_3Q_nPBnC1HfZaWLTWxw1v0E0rvp0ZYHEpfvqAPLS4o-R9s2FBUw3K9RjaqZkxYFzBqvCFVXmlbezKvWG6cZkCvLZeQf3QdGf5BiRu09N8Bm-Gdor14KQ5mbur4BoOcM1IxqQAz4Zv7KstdXb3KUndc0okFcs2GIIX1psdML_htkDDYWw-VKOAjZixDsq3CxMTbA4rtUg')"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest flex flex-col items-center gap-gutter px-margin-mobile md:px-margin-desktop text-center mt-auto border-t border-white/5">
+<a class="font-display-lg text-headline-sm text-on-surface opacity-80 hover:opacity-100 transition-opacity" href="#">Velvet &amp; Ember</a>
+<div class="flex flex-wrap justify-center gap-6 mt-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Contact Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Consent Guidelines</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Adult Content Disclaimer</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant/60 mt-8 text-sm">
+            © 2024 Velvet &amp; Ember. Designed with intimacy and consent at its core.
+        </p>
+</footer>
+</body></html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvet &amp; Ember - Explore Intimacy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#131313",
+                        "on-secondary-container": "#dab36a",
+                        "surface-tint": "#ffb4a8",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#c97f80",
+                        "outline-variant": "#58413e",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary": "#532022",
+                        "secondary-container": "#604403",
+                        "on-primary": "#670502",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#871f15",
+                        "on-tertiary-fixed": "#390b0e",
+                        "tertiary-fixed-dim": "#ffb3b2",
+                        "error-container": "#93000a",
+                        "on-background": "#e5e2e1",
+                        "primary": "#ffb4a8",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-fixed": "#ffdea5",
+                        "inverse-primary": "#a83729",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#410000",
+                        "on-primary-container": "#ee6a57",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353534",
+                        "tertiary-fixed": "#ffdad9",
+                        "on-tertiary-fixed-variant": "#6f3537",
+                        "tertiary": "#ffb3b2",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary": "#e9c176",
+                        "surface-bright": "#3a3939",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-secondary-fixed": "#261900",
+                        "surface-dim": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#412d00",
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#dfbfba",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "primary-container": "#600000",
+                        "outline": "#a68a86",
+                        "background": "#131313",
+                        "tertiary-container": "#4e1b1d",
+                        "inverse-surface": "#e5e2e1"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    fontFamily: {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "display-lg-mobile": ["36px", { lineHeight: "1.1", fontWeight: "700" }],
+                        "headline-sm": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "headline-md": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Film grain texture */
+        .film-grain {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        /* Custom bloom shadow for buttons */
+        .bloom-burgundy {
+            box-shadow: 0 0 24px rgba(96, 0, 0, 0.4);
+        }
+        .bloom-burgundy:hover {
+            box-shadow: 0 0 32px rgba(96, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased overflow-x-hidden selection:bg-tertiary-container selection:text-tertiary">
+<div class="film-grain"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-[0_0_20px_rgba(96,0,0,0.1)] transition-all ease-in-out duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md tracking-tight text-primary hover:scale-105 duration-300" href="#">Velvet &amp; Ember</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Topics</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors hidden md:block">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">search</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">account_circle</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center pt-24 pb-12 overflow-hidden">
+<!-- Atmospheric Background -->
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="w-full h-full bg-cover bg-center" data-alt="Abstract macro photography of soft, undulating curves resembling skin textures. Deep plum and charcoal shadows blend into warm, luminous blush gradients. Soft, diffused volumetric lighting creates an intimate, sensual, and highly sophisticated minimal aesthetic without explicit features." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMAqxm10cZfd8ELHhVQx6NNUag0pphA7JtT07RrTQNzL2xZc-cpQ_7NyfCglVYhbup--GzLdvcVvuhrivS_5tD4mToTIlaZm_SUGiywWjAdYYbh8JqRBMli-QpJ54gPdVctR9NB42C4wLmXtG_jEqxk9ETJiun7IFcZzLBwPog42iht2fYPxTh_mGOVI-6omeZ5lWDw2ct3y1mVzzG8jclj0c9SxWAxP6CvdN3fpkLTf0o5U4YsaN41A')"></div>
+<!-- Gradient Overlay for depth -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-surface"></div>
+</div>
+<div class="relative z-10 text-center max-w-3xl px-margin-mobile md:px-0 mx-auto flex flex-col items-center gap-6 animate-fade-in-up">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface drop-shadow-2xl">
+                Explore Intimacy Together
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl text-balance">
+                A sensual, judgment-free guide to deeper connection, pleasure, and charged communication with your partner.
+            </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 mt-8">
+<a class="bg-primary-container text-inverse-surface font-label-caps text-label-caps uppercase tracking-wider px-8 py-4 rounded-full bloom-burgundy transition-all duration-300 transform hover:scale-[1.02]" href="#topics">
+                    Browse Topics
+                </a>
+<a class="border border-secondary text-secondary font-label-caps text-label-caps uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300 hover:bg-secondary/10 shadow-[inset_0_0_10px_rgba(233,193,118,0)] hover:shadow-[inset_0_0_10px_rgba(233,193,118,0.2)]" href="#">
+                    Start with Beginner Guides
+                </a>
+</div>
+</div>
+</section>
+<!-- Featured Categories (Bento Grid) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10" id="topics">
+<div class="mb-16 text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Curated Intentions</h2>
+<div class="h-px w-16 bg-secondary mx-auto opacity-50"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter auto-rows-[240px]">
+<!-- Card 1: Foreplay (Large) -->
+<a class="group relative md:col-span-2 md:row-span-2 rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-tertiary/50 transition-all duration-500 shadow-lg block" href="#">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A delicate, macro view of fingertips lightly trailing over dark, luxurious velvet fabric. Warm amber and deep burgundy lighting. Sophisticated, intimate, editorial photography style capturing the anticipation of touch." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyHyyToRWs0V8CYUAa-YAhuWsaiO3M-pKJfaZ9SFmnW6M7if2jmTTYBZjQbA9RSHK2A8pEQrnqWcdN9LWOWIOGlJhSupJMdRdX5WEYuKfYfYHm8Scpe7oPx5IWo5ABzTpX5IRU8FOf7qxFvlXSCUxB179bEJc2Jh3NoMZOTQ8F3Ub_lj_iT5_VqqGwWEKuDEyihDyHdtPvlky_0y0DYinmzc1eXUmdNgPdwprDcXrbGst-a4koEqc5OA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Foreplay</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-2 group-hover:translate-y-0">The art of anticipation and slow build.</p>
+</div>
+</a>
+<!-- Card 2: Communication -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-tertiary/50 transition-all duration-500 shadow-lg block" href="#">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="Abstract, soft focus image of two silhouetted figures closely leaning in against a dark, moody background lit by a faint, warm blush glow. Evokes whispered secrets and deep emotional connection." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuK9Rk3e-Ax7bxfXMJYDti2UD8Imv6WSQn59gKBnCBp7oy3rQUb4eEPKQbK_LZ01GwptuVWvCcBmII59CtHQAP-j4rN3vDV5gM_oLIAWSEnpH51widtpUievHGZLRaaHXX-3o3EgvENzi-j2o681mclkM7goAYOBa_oWsm7W1PaVpCTQzfkZ8P4TDYolheiYosqlNHMTGhbKJ15-_wDpFmCEE_yjKiY2TMRvrLwXaPP4UcR3q25dk_Kw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Communication</h3>
+</div>
+</a>
+<!-- Card 3: Techniques -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-tertiary/50 transition-all duration-500 shadow-lg block" href="#">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A minimalist, highly stylized photograph of intertwined hands under dramatic, low-key lighting. Sharp contrasts between deep shadows and soft highlights on skin. Premium erotic wellness editorial style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkYxZ8_5CGbAd88iz_Il_M5eGwwsvsLlnQQNfiAXGnl045qcTzxRpAWxiSrsxYhVfuv2Y1HtqG4mmmq8qGM3uyXlfVrnzoXlmk5j93ptgj68IwYwM4ZTQgIgDvJ6k1lpdCsx8uRYGbk0pBE2I8PgZWL-oKLKFmeUtkhPwSCnIF6Yu5wjy1tF-jW4c7G7QogN9MNkIbCD-FbhC7nIRpEYyvFF6tI54icDQzua8ScwAN3zvxSZhVZqwuvA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Techniques</h3>
+</div>
+</a>
+<!-- Card 4: Positions (Tall) -->
+<a class="group relative md:row-span-2 rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-tertiary/50 transition-all duration-500 shadow-lg block lg:col-start-4 lg:row-start-1" href="#">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="Fluid, abstract geometric forms resembling intertwined bodies carved from dark, polished stone or glass, illuminated by a solitary, warm amber light source. Artistic, non-explicit, museum-quality aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZEVwxvdC6PsVWme4Le6B_L26lrIc1txwhKmLv5V9R_QURoVNiK8LqBRKmevTiLHOb2KKKPLLhgLP0Y699cvDiDujraJdvZpxAaGH5radP-nTTna0U2PnUfHOIs3-82iqt_X2xMTGa8cb3vjLBOPIMx49XuuR5Mh16Ej3DdyAgybLKWerM18Pc-yz2a3reMR73I19yNRqogbz1tXfGp6ZuFJxhwwQvFf3_J1y2l7srlux-c8cc7c6f9g')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Positions</h3>
+</div>
+</a>
+<!-- Card 5: Toys & Tools -->
+<a class="group relative md:col-span-2 lg:col-span-1 rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-tertiary/50 transition-all duration-500 shadow-lg block" href="#">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A sleek, modern silhouette of an elegant, minimalist wellness tool resting on dark satin. Lit with extremely soft, low-contrast studio lighting emphasizing curves and premium materials. High-end luxury mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCmqWwykT3xXJsSoMpxeKsl0svhJBE7BCP5V-q0pCx5rw_qFXLFJgqXyrjar3TGPxiqBgj6cD60uIj96oaeOmCxFqFOge-NlMasm-5odcln666vrtYX7ye6z9X-KI6YrXjsMbmFYI-b071isgl6iKTwkKRAao8GO7-4KuH0bxis1kiCpsumL921zB9JU69UEyz81_MNE0fxEhNyss4KExFdOlwJcPE3_3gNqc1CBRD-NLD0uoPd7Ntfw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Toys &amp; Tools</h3>
+</div>
+</a>
+<!-- Card 6: Emotional Intimacy -->
+<a class="group relative md:col-span-2 rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-tertiary/50 transition-all duration-500 shadow-lg block" href="#">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A soft, blurred reflection of candlelight in a dark mirror or dark water surface. Ethereal, moody, deep blacks and warm, flickering orange/gold tones. Represents introspection and deep emotional bonding." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkqjK8dOneo4sLSdDa-i5Uic-qYwyB4tR9FNSAX6vg4sxsom2IxmJNlCn5Yg56fu6RASqVSNWL4DisI0EqXFmbL4QyhhnL5v69OcLisiPvFU-YuHDA66woPEfrVI4lAkHT67je60-upZi_dlokMypdRJ3dZQVpBD2SM2osvl20Hl1NFi6T5cAUO_P7kPgyqHL5_s2cRaHsdce62dys0WQ0gVA-FH0-umYvrvNIc4r4Tv0nTP-YvSOOPg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Emotional Intimacy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-2 group-hover:translate-y-0">Building the foundation of trust.</p>
+</div>
+</a>
+<!-- Card 7: Aftercare -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-tertiary/50 transition-all duration-500 shadow-lg block" href="#">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A macro shot of soft, cozy textures like heavy knit blankets in deep charcoal and muted plum. Gentle, hazy lighting creating a feeling of profound safety, warmth, and descending calm. Relaxed, protective aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEZ8nAbkm0ywI2D2drNF2VXDAfE6fJIopJMhDcu7kN_gb1BfZ35l_N9mEB1DhQRkzdQFdMarIsmkPs1nxz3GVBqSTmxVBsfu-fSJA5-yYuIImI9DIqbH2G2czDLleeNxPWXZt7N14cAaIxDL3O3VIL1SkGHaj3ycJCE1cErWHPzupn5iYm0QquolnXenir0_KPfex4vWTxPjCXp-Uf-12juKOrNg5wjFf1ltRTCNN95DbMo6yRx27E7w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Aftercare</h3>
+</div>
+</a>
+</div>
+</section>
+<!-- How it Works Section -->
+<section class="py-24 bg-surface-container-low relative border-y border-outline/5">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">The Velvet &amp; Ember Journey</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">A slow, intentional approach to rediscovering each other, built on a foundation of safety and curiosity.</p>
+</div>
+<div class="flex flex-col md:flex-row justify-center items-start gap-12 md:gap-8 relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-8 left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+<!-- Step 1 -->
+<div class="flex-1 text-center relative z-10 group">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-secondary/30 mx-auto flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(218,179,106,0.1)] group-hover:shadow-[0_0_20px_rgba(218,179,106,0.2)] transition-shadow duration-500">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 200;">tune</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Curate Your Mood</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Set the scene and select topics that align with your shared desires and comfort levels.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex-1 text-center relative z-10 group">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-secondary/30 mx-auto flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(218,179,106,0.1)] group-hover:shadow-[0_0_20px_rgba(218,179,106,0.2)] transition-shadow duration-500">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 200;">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Learn Together</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Explore our tasteful, expertly crafted guides designed to spark imagination and technique.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex-1 text-center relative z-10 group">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-secondary/30 mx-auto flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(218,179,106,0.1)] group-hover:shadow-[0_0_20px_rgba(218,179,106,0.2)] transition-shadow duration-500">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 200;">favorite</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Connect Deeply</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Translate knowledge into tactile, emotionally resonant experiences that strengthen your bond.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest flex flex-col items-center gap-gutter px-margin-mobile md:px-margin-desktop text-center mt-auto z-10 relative">
+<div class="font-display-lg text-headline-sm text-on-surface mb-4">Velvet &amp; Ember</div>
+<nav class="flex flex-wrap justify-center gap-6 mb-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Contact Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Consent Guidelines</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Adult Content Disclaimer</a>
+</nav>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm opacity-60">
+            © 2024 Velvet &amp; Ember. Designed with intimacy and consent at its core.
+        </p>
+</footer>
+<script>
+        // Simple script for subtle header background opacity on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-[0_0_20px_rgba(96,0,0,0.3)]');
+                header.classList.remove('shadow-[0_0_20px_rgba(96,0,0,0.1)]');
+            } else {
+                header.classList.add('shadow-[0_0_20px_rgba(96,0,0,0.1)]');
+                header.classList.remove('shadow-[0_0_20px_rgba(96,0,0,0.3)]');
+            }
+        });
+    </script>
+</body></html>

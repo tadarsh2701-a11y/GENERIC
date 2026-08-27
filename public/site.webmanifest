@@ -1,0 +1,17 @@
+{
+  "name": "Velvet & Ember - Intimacy & Connection Sanctuary",
+  "short_name": "Velvet & Ember",
+  "description": "A sensual, judgment-free guide to deeper connection, pleasure, and charged communication with your partner.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#131313",
+  "theme_color": "#600000",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
