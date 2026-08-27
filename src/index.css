@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #131313;
+  --color-background: #131313;
+  --color-primary: #ffb4a8;
+  --color-primary-container: #600000;
+  --color-on-primary: #670502;
+  --color-on-primary-container: #ee6a57;
+  --color-primary-fixed: #ffdad4;
+  --color-primary-fixed-dim: #ffb4a8;
+  
+  --color-secondary: #e9c176;
+  --color-secondary-container: #604403;
+  --color-on-secondary: #412d00;
+  --color-on-secondary-container: #dab36a;
+  --color-secondary-fixed: #ffdea5;
+  --color-secondary-fixed-dim: #e9c176;
+
+  --color-tertiary: #ffb3b2;
+  --color-tertiary-container: #4e1b1d;
+  --color-on-tertiary: #532022;
+  --color-on-tertiary-container: #c97f80;
+  --color-tertiary-fixed: #ffdad9;
+  --color-tertiary-fixed-dim: #ffb3b2;
+
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-bright: #3a3939;
+  --color-surface-dim: #131313;
+  --color-surface-variant: #353534;
+
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #dfbfba;
+  --color-on-background: #e5e2e1;
+  --color-outline: #a68a86;
+  --color-outline-variant: #58413e;
+  --color-inverse-surface: #e5e2e1;
+  --color-inverse-on-surface: #313030;
+  --color-inverse-primary: #a83729;
+
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+
+  --font-display-lg: "Playfair Display", Georgia, serif;
+  --font-headline-md: "Playfair Display", Georgia, serif;
+  --font-headline-sm: "Playfair Display", Georgia, serif;
+  --font-display-lg-mobile: "Playfair Display", Georgia, serif;
+  --font-body-lg: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-md: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-caps: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 20px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1200px;
+  --spacing-unit: 8px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+/* Film grain texture */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom bloom shadow for buttons */
+.bloom-burgundy {
+  box-shadow: 0 0 24px rgba(96, 0, 0, 0.4);
+}
+.bloom-burgundy:hover {
+  box-shadow: 0 0 32px rgba(96, 0, 0, 0.6);
+}
+
+.bloom-glow {
+  box-shadow: 0 0 20px rgba(255, 180, 168, 0.15);
+}
+
+.bloom-shadow {
+  box-shadow: 0 0 30px rgba(96, 0, 0, 0.15);
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background-color: rgba(45, 19, 44, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(233, 193, 118, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card {
+  background: rgba(45, 19, 44, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(218, 179, 106, 0.1);
+}
+
+.glass-card-hover {
+  transition: all 0.4s ease;
+}
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px -10px rgba(255, 180, 168, 0.15);
+  border-color: rgba(255, 180, 168, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(233, 193, 118, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(233, 193, 118, 0.4);
+}
+
