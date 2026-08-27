@@ -1,0 +1,6 @@
+{
+  "name": "Velvet & Ember",
+  "description": "A sensual, judgment-free guide to deeper connection, pleasure, and charged communication with your partner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
