@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://velvetandember.app';
+const BASE_URL = 'https://www.kamasoul.fun';
 const currentDate = new Date().toISOString().split('T')[0];
 
 // Static core routes
